@@ -45,5 +45,12 @@ def my_login(request):
 
     return render(request, 'chance/my-login.html', context=context) 
 
+
+# Logout User
+def user_logout(request):
+    auth.logout(request)
+    return redirect('my-login')
+
+# Dashboard
 def dashboard(request):
     return render(request, 'chance/dashboard.html')
