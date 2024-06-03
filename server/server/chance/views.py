@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def homepage(request):
-    return HttpResponse("Home")
+    return render(request, 'chance/index.html')
 
 def register(request):
-    return HttpResponse("Register") 
+    return render(request, 'chance/register.html') 
 
 def my_login(request):
-    return HttpResponse("Login") 
+    return render(request, 'chance/my-login.html') 
 
 def dashboard(request):
-    return HttpResponse("Dashboard")
+    return render(request, 'chance/dashboard.html')
